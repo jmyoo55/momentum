@@ -3,5 +3,11 @@ const temp = document.getElementById("temp");
 const place = document.getElementById("place");
 const time = document.getElementById("time");
 const name = document.getElementById("name");
+const input = document.getElementById("input_name");
 
+function showTime(){
+    const now = new Date();
+    time.innerText= now.toLocaleTimeString().slice(3);
+}
 
+setInterval(showTime,1000); //1초에 한번씩 실행
